@@ -290,6 +290,10 @@ namespace Raavel.Clients
                             }
                             else if (HttpContext.Current.Session != null && !String.IsNullOrEmpty(HttpContext.Current.Session.SessionID))
                             {
+                                if (HttpContext.Current.Session.IsNewSession){
+                                    HttpContext.Current.Session[HttpContext.Current.Session.SessionID] = "";
+                                }
+
                                 error.UserId = HttpContext.Current.Session.SessionID;
                             }
                             else
