@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE905F55-320D-4228-B34B-919183B48D24}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Raavel</RootNamespace>
+    <AssemblyName>Raavel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clients\BaseClient.cs" />
+    <Compile Include="Clients\WebAPIClient.cs" />
+    <Compile Include="Clients\WebMVCClient.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="ConfigurationStorage\BaseStorage.cs" />
+    <Compile Include="ConfigurationStorage\ConfigSection.cs" />
+    <Compile Include="ConfigurationStorage\IConfigurationStorage.cs" />
+    <Compile Include="Diagnostics.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="ExceptionParser.cs" />
+    <Compile Include="Handlers\TaskExceptionHandler.cs" />
+    <Compile Include="Handlers\UnhandledExceptionHandler.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="Metadata.cs" />
+    <Compile Include="NotificationFactory.cs" />
+    <Compile Include="Notifier.cs" />
+    <Compile Include="Payload\App\AppInfo.cs" />
+    <Compile Include="Payload\App\AppStateInfo.cs" />
+    <Compile Include="Payload\Core\NotifierInfo.cs" />
+    <Compile Include="Payload\Core\UserInfo.cs" />
+    <Compile Include="Payload\Device\DeviceInfo.cs" />
+    <Compile Include="Payload\Device\DeviceStateInfo.cs" />
+    <Compile Include="Payload\Event\EventInfo.cs" />
+    <Compile Include="Payload\Event\ExceptionInfo.cs" />
+    <Compile Include="Payload\Event\StackTraceFrameInfo.cs" />
+    <Compile Include="Payload\Event\ThreadInfo.cs" />
+    <Compile Include="Payload\Notification.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Raavel.nuspec" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
