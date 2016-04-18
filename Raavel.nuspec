@@ -2,18 +2,20 @@
 <package>
   <metadata>
     <id>Raavel</id>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <title>Raavel .NET Notifier</title>
     <authors>mpatel</authors>
     <owners>mpatel</owners>
+    <projectUrl>https://github.com/raavel/raavel-dotnet</projectUrl>
+    <iconUrl>https://raavel.com/root/content/images/logo-100-dark.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Raavel .NET notifier</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes />
+    <copyright>Copyright 2016</copyright>
+    <tags>raavel error notifier logging reports</tags>
     <dependencies>
       <dependency id="Newtonsoft.Json" version="8.0.0.0" />
     </dependencies>
-    <copyright>Copyright 2016</copyright>
-    <tags>raavel error notifier logging reports</tags>
   </metadata>
   <files>
     <file src="bin\Release\Raavel*.dll" target="lib" />
