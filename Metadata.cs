@@ -52,7 +52,7 @@ namespace Raavel
         /// </summary>
         /// <param name="tabEntryKey">The key of the entry</param>
         /// <param name="tabEntryValue">The object representing the entry</param>
-        public void AddToTab(string tabEntryKey, object tabEntryValue)
+        public void AddCustomData(string tabEntryKey, object tabEntryValue)
         {
             AddToTab(DefaultTabName, tabEntryKey, tabEntryValue);
         }
