@@ -10,7 +10,7 @@ namespace Raavel
     internal class Notifier
     {
         public const string Name = ".NET Raavel Notifier";
-        public static readonly Uri Url = new Uri("https://github.com/raavelio/");
+        public static readonly Uri Url = new Uri("https://github.com/raavel/");
 
         public static readonly string Version =
             Assembly.GetExecutingAssembly().GetName().Version.ToString(3);
@@ -70,7 +70,7 @@ namespace Raavel
 
                 // However, "offline" handling should be addressed. I.e. Raavel should be queued
                 // until network is available and sent then, see
-                // https://github.com/raavelio
+                // https://github.com/raavel
             }
         }
     }

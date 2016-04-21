@@ -18,6 +18,5 @@ C:\raavel.com\Raavel\Raavel\bin\Release\System.Web.Razor.xml
 C:\raavel.com\Raavel\Raavel\bin\Release\System.Web.WebPages.Razor.xml
 C:\raavel.com\Raavel\Raavel\bin\Release\System.Web.WebPages.xml
 C:\raavel.com\Raavel\Raavel\bin\Release\System.Web.WebPages.Deployment.xml
-C:\raavel.com\Raavel\Raavel\obj\Release\Raavel.csprojResolveAssemblyReference.cache
 C:\raavel.com\Raavel\Raavel\obj\Release\Raavel.dll
 C:\raavel.com\Raavel\Raavel\obj\Release\Raavel.pdb
