@@ -73,9 +73,9 @@ namespace Raavel.Clients
         /// Exception attribute to automatically handle errors when registered (requires > .NET 4.0)
         /// </summary>
         [AttributeUsageAttribute(AttributeTargets.Class | AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
-        public sealed class BugsnagExceptionHandler : HandleErrorAttribute
+        public sealed class RaavelExceptionHandler : HandleErrorAttribute
         {
-            internal BugsnagExceptionHandler()
+            internal RaavelExceptionHandler()
             {
             }
 
@@ -89,9 +89,9 @@ namespace Raavel.Clients
             }
         }
 
-        public static BugsnagExceptionHandler ErrorHandler()
+        public static RaavelExceptionHandler ErrorHandler()
         {
-            return new BugsnagExceptionHandler();
+            return new RaavelExceptionHandler();
         }
 #endif
     }

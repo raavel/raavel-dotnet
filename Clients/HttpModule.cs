@@ -18,15 +18,22 @@ namespace Raavel.Clients
         {
         }
 
-        private static void SendError(object sender, EventArgs e)
+        private void SendError(object sender, EventArgs e)
         {
             var application = (HttpApplication)sender;
-            var ex = application.Server.GetLastError();
+            var lastError = application.Server.GetLastError();
 
-            if (ex is HttpUnhandledException)
-                ex = ex.InnerException;
+            new BaseClient().Notify(Unwrap(lastError));
+        }
 
-            new BaseClient().Notify(ex);
+        private Exception Unwrap(Exception exception)
+        {
+            if (exception is HttpUnhandledException)
+            {
+                return exception.GetBaseException();
+            }
+
+            return exception;
         }
     }
 }

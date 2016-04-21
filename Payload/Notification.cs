@@ -4,12 +4,12 @@ using Newtonsoft.Json;
 namespace Raavel.Payload
 {
     /// <summary>
-    /// Represents a single notification object to send to Bugsnag
+    /// Represents a single notification object to send to Raavel
     /// </summary>
     internal class Notification
     {
         /// <summary>
-        /// Gets or sets the API key associated with the Bugsnag account to send the notification to
+        /// Gets or sets the API key associated with the Raavel account to send the notification to
         /// </summary>
         [JsonProperty("apiKey")]
         public string ApiKey { get; set; }
